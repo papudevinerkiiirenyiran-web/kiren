@@ -10,7 +10,7 @@
         :root { --burgundy: #800020; --cream: #FDFBF7; }
         body { font-family: 'Montserrat', sans-serif; background-color: var(--cream); color: #1a1a1a; scroll-behavior: smooth; }
         
-        /* 核心：定义品牌字体，用于 Kiren, K., Slogan */
+        /* 字体：严格执行你的要求，全部统一 */
         h1, h2, h3, .brand-font { font-family: 'Playfair Display', serif; }
         
         /* Hero Section */
@@ -21,7 +21,7 @@
             display: flex; align-items: center; justify-content: center; text-align: center; color: white;
         }
 
-        /* Milestone Card Styling */
+        /* Milestone Card */
         .milestone-card {
             background: white; border-top: 5px solid var(--burgundy);
             transition: all 0.4s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.02);
@@ -30,12 +30,11 @@
         }
         .milestone-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
 
-        /* Lifestyle Image - Masonry Layout */
+        /* Lifestyle Image - 保持黄金版本的瀑布流参数 */
         .lifestyle-img {
             width: 100%; height: auto; border: 8px solid white;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            margin-bottom: 2rem; /* 图片之间的间距 */
-            display: block;
+            margin-bottom: 2rem;
         }
         
         .nav-link:hover { color: var(--burgundy); }
@@ -47,7 +46,6 @@
     <header class="hero-section">
         <div class="px-4">
             <h1 class="text-7xl md:text-9xl mb-6 italic uppercase text-white tracking-tighter brand-font">Kiren</h1>
-            
             <p class="text-2xl md:text-4xl italic mb-3 font-light text-white">"Savoring Freedom, Deciding Excellence."</p>
             <p class="text-lg md:text-xl text-white/80 font-light mb-8 italic brand-font">"Assaporare la libertà, decidere l'eccellenza."</p>
         </div>
@@ -55,7 +53,6 @@
 
     <nav class="sticky top-0 z-50 py-6 px-10 flex justify-between items-center bg-white/95 backdrop-blur-md border-b border-stone-100">
         <span class="text-burgundy font-bold text-3xl italic brand-font">K.</span>
-        
         <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.2em] font-semibold">
             <a href="#about" class="nav-link">About <span class="text-burgundy">/ Chi Sono</span></a>
             <a href="#milestones" class="nav-link">Milestones <span class="text-burgundy">/ Esperienze</span></a>
@@ -130,23 +127,15 @@
         <p class="text-center text-burgundy/60 italic mb-16 brand-font text-xl">Vita in Veneto e Visioni</p>
         
         <div class="columns-1 md:columns-3 gap-8 space-y-8">
-            
             <div class="break-inside-avoid">
                 <img src="lifestyle4.png" class="lifestyle-img" alt="Exploration">
             </div>
-            
             <div class="break-inside-avoid">
                 <img src="lifestyle8.png" class="lifestyle-img" alt="Social Networking">
             </div>
-            
-            <div class="break-inside-avoid">
-                <img src="lifestyle6.png" class="lifestyle-img" alt="Cafe Culture">
-            </div>
-            
             <div class="break-inside-avoid">
                 <img src="lifestyle7.png" class="lifestyle-img" alt="Biodiversity">
             </div>
-            
         </div>
         
         <p class="mt-16 text-center text-stone-400 text-[10px] uppercase tracking-[0.5em] font-bold">
@@ -167,11 +156,4 @@
         <p class="text-white/40 italic mb-10 brand-font text-sm">Rimani Deciso.</p>
         
         <div class="opacity-40 text-[10px] uppercase tracking-[0.3em] space-y-3 font-semibold">
-            <p>University of Padua, Italy</p>
-            <p>(+39) 3938549090 | yiran.qian@studenti.unipd.it</p>
-        </div>
-        <p class="mt-16 text-[8px] opacity-20 uppercase tracking-[0.5em] font-bold">&copy; 2026 Kiren. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
+            <p>
