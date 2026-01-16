@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiren | Savoring Freedom, Deciding Excellence</title>
+    <title>Kiren | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root { --burgundy: #800020; --cream: #FDFBF7; }
         body { font-family: 'Montserrat', sans-serif; background-color: var(--cream); color: #1a1a1a; scroll-behavior: smooth; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .text-burgundy { color: var(--burgundy); }
-        .bg-burgundy { background-color: var(--burgundy); }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--burgundy); }
         
-        /* 首页全屏背景 */
+        /* Hero Section */
         .hero-section {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('hero.png');
@@ -21,111 +19,20 @@
             display: flex; align-items: center; justify-content: center; text-align: center; color: white;
         }
 
-        /* 经历卡片阴影与悬停 */
+        /* Milestone Card Styling */
         .milestone-card {
             background: white; border-top: 5px solid var(--burgundy);
             transition: all 0.4s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            padding: 2rem;
         }
         .milestone-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
 
-        /* 照片墙：保持原比例显示 */
+        /* Lifestyle Image - Full Display (Masonry Logic) */
         .lifestyle-img {
-            width: 100%; height: auto; border: 10px solid white;
+            width: 100%; height: auto; border: 8px solid white;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            margin-bottom: 2rem; /* Spacing between stacked images on mobile */
         }
-        .lifestyle-img:hover { transform: scale(1.03); }
-
-        nav { background: rgba(253, 251, 247, 0.9); backdrop-blur: 10px; }
-    </style>
-</head>
-<body>
-
-    <header class="hero-section">
-        <div>
-            <h1 class="text-7xl md:text-9xl mb-4 italic uppercase tracking-tighter">Kiren</h1>
-            <p class="text-2xl md:text-3xl italic mb-8 font-light">"Savoring Freedom, Deciding Excellence."</p>
-            <p class="text-[10px] tracking-[0.5em] uppercase opacity-80">Assaporare la libertà, decidere l'eccellenza</p>
-        </div>
-    </header>
-
-    <nav class="sticky top-0 z-50 py-6 px-10 flex justify-between items-center border-b border-stone-100">
-        <span class="text-burgundy font-bold text-2xl italic">K.</span>
-        <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.3em] font-semibold">
-            <a href="#about" class="hover:text-burgundy transition">About</a>
-            <a href="#milestones" class="hover:text-burgundy transition">Milestones</a>
-            <a href="#lifestyle" class="hover:text-burgundy transition">Veneto Life</a>
-        </div>
-    </nav>
-
-    <section id="about" class="py-24 px-8 max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-        <div class="order-2 md:order-1">
-            <h2 class="text-5xl mb-10 italic text-burgundy">Professional Edge</h2>
-            <div class="space-y-6 text-gray-700 leading-relaxed text-lg">
-                <p>Currently pursuing a <strong>Master in Italian Food and Wine</strong> at University of Padua.</p>
-                <p>I specialize in bridging the gap between traditional Italian craftsmanship and global market strategies, combining hospitality precision with a decisive professional edge.</p>
-                <div class="flex gap-4 pt-6 text-burgundy font-bold uppercase text-xs">
-                    <span class="border-l-2 border-burgundy pl-3">Decisive</span>
-                    <span class="border-l-2 border-burgundy pl-3">Free-Spirited</span>
-                    <span class="border-l-2 border-burgundy pl-3">Multicultural</span>
-                </div>
-            </div>
-        </div>
-        <div class="order-1 md:order-2">
-            <img src="professional.png" alt="Kiren" class="rounded shadow-2xl border-[15px] border-white w-full">
-        </div>
-    </section>
-
-    <section id="milestones" class="py-24 bg-stone-100 px-8">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl text-center mb-20 italic text-burgundy">Career Milestones</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="milestone-card p-10">
-                    <h3 class="text-xs font-bold uppercase tracking-widest mb-6 opacity-40">Sales Coordination</h3>
-                    <p class="font-bold text-xl mb-4">The St. Regis Shanghai</p>
-                    <p class="text-sm text-gray-600 leading-relaxed">Secured multimillion-dollar contracts through proactive client analysis. Optimized internal order flows and info-systems, reducing processing time by 20%.</p>
-                </div>
-                <div class="milestone-card p-10">
-                    <h3 class="text-xs font-bold uppercase tracking-widest mb-6 opacity-40">Digital Marketing</h3>
-                    <p class="font-bold text-xl mb-4">Envista Holdings</p>
-                    <p class="text-sm text-gray-600 leading-relaxed">Directed international sales alignment and technical localization for DamonQ2 systems. Managed global logistics distribution plans and technical R&D database refine.</p>
-                </div>
-                <div class="milestone-card p-10">
-                    <h3 class="text-xs font-bold uppercase tracking-widest mb-6 opacity-40">Digital Strategy</h3>
-                    <p class="font-bold text-xl mb-4">Popcorn Club</p>
-                    <p class="text-sm text-gray-600 leading-relaxed">Boosted offline event conversion by 20% via decisive WeChat community management. Analyzed user feedback to refine online brand operational effectiveness.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="lifestyle" class="py-24 px-8 max-w-6xl mx-auto">
-        <h2 class="text-4xl text-center mb-16 italic text-burgundy">Veneto Life & Insights</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-start">
-            <div class="space-y-10">
-                <img src="lifestyle4.png" class="lifestyle-img" alt="Exploration">
-            </div>
-            <div class="space-y-10">
-                <img src="lifestyle6.png" class="lifestyle-img" alt="Cafe Culture">
-            </div>
-            <div class="space-y-10">
-                <img src="lifestyle7.png" class="lifestyle-img" alt="Nature and Wine">
-            </div>
-        </div>
-        <div class="mt-20 text-center text-stone-400 text-[10px] uppercase tracking-[0.5em]">
-            Riccioto | Soave | Prosecco | Lugana | Fritto Misto
-        </div>
-    </section>
-
-    <footer class="py-20 bg-stone-900 text-white text-center">
-        <h2 class="text-white text-2xl mb-10 italic italic tracking-widest">Stay Decisive.</h2>
-        <div class="opacity-40 text-[9px] uppercase tracking-[0.3em] space-y-3 font-semibold">
-            <p>University of Padua, Italy</p>
-            <p>(+39) 3938549090</p>
-            <p>yiran.qian@studenti.unipd.it</p>
-        </div>
-        <p class="mt-16 text-[8px] opacity-20 uppercase tracking-[0.5em] font-bold">&copy; 2026 Kiren. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
+        
+        .nav-link:hover { color: var(--burgundy); }
+        .ita-text { color: #666; font-style: italic; font-size: 0.
