@@ -10,7 +10,7 @@
         :root { --burgundy: #800020; --cream: #FDFBF7; }
         body { font-family: 'Montserrat', sans-serif; background-color: var(--cream); color: #1a1a1a; scroll-behavior: smooth; }
         
-        /* 品牌字体：用于 Kiren, K., 和 Slogan */
+        /* 核心：定义品牌字体，用于 Kiren, K., Slogan */
         h1, h2, h3, .brand-font { font-family: 'Playfair Display', serif; }
         
         /* Hero Section */
@@ -30,11 +30,12 @@
         }
         .milestone-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
 
-        /* Lifestyle Image - 保持黄金版本的 Masonry 逻辑 */
+        /* Lifestyle Image - Masonry Layout */
         .lifestyle-img {
             width: 100%; height: auto; border: 8px solid white;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
+            margin-bottom: 2rem; /* 图片之间的间距 */
+            display: block;
         }
         
         .nav-link:hover { color: var(--burgundy); }
@@ -48,12 +49,13 @@
             <h1 class="text-7xl md:text-9xl mb-6 italic uppercase text-white tracking-tighter brand-font">Kiren</h1>
             
             <p class="text-2xl md:text-4xl italic mb-3 font-light text-white">"Savoring Freedom, Deciding Excellence."</p>
-            <p class="text-lg md:text-xl text-white/80 font-light mb-8 italic">"Assaporare la libertà, decidere l'eccellenza."</p>
+            <p class="text-lg md:text-xl text-white/80 font-light mb-8 italic brand-font">"Assaporare la libertà, decidere l'eccellenza."</p>
         </div>
     </header>
 
     <nav class="sticky top-0 z-50 py-6 px-10 flex justify-between items-center bg-white/95 backdrop-blur-md border-b border-stone-100">
         <span class="text-burgundy font-bold text-3xl italic brand-font">K.</span>
+        
         <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.2em] font-semibold">
             <a href="#about" class="nav-link">About <span class="text-burgundy">/ Chi Sono</span></a>
             <a href="#milestones" class="nav-link">Milestones <span class="text-burgundy">/ Esperienze</span></a>
@@ -112,10 +114,8 @@
                 <div class="milestone-card">
                     <h3 class="text-[10px] font-bold uppercase tracking-widest mb-1 opacity-40">Consulting & Education</h3>
                     <h4 class="text-burgundy text-lg font-bold mb-4 brand-font">Popcorn Club</h4>
-                    
                     <p class="font-bold text-sm uppercase tracking-wide mb-1">Online Sales & Marketing</p>
                     <p class="text-xs text-stone-500 italic mb-4">Vendite e Marketing Online</p>
-                    
                     <hr class="border-stone-200 mb-4">
                     <p class="text-sm text-gray-700 mb-2">Boosted offline event conversion by 20% via decisive WeChat community management.</p>
                     <p class="ita-text text-xs">Aumento del 20% delle conversioni eventi offline tramite gestione strategica su WeChat.</p>
@@ -130,15 +130,23 @@
         <p class="text-center text-burgundy/60 italic mb-16 brand-font text-xl">Vita in Veneto e Visioni</p>
         
         <div class="columns-1 md:columns-3 gap-8 space-y-8">
+            
             <div class="break-inside-avoid">
                 <img src="lifestyle4.png" class="lifestyle-img" alt="Exploration">
             </div>
+            
             <div class="break-inside-avoid">
                 <img src="lifestyle8.png" class="lifestyle-img" alt="Social Networking">
             </div>
+            
+            <div class="break-inside-avoid">
+                <img src="lifestyle6.png" class="lifestyle-img" alt="Cafe Culture">
+            </div>
+            
             <div class="break-inside-avoid">
                 <img src="lifestyle7.png" class="lifestyle-img" alt="Biodiversity">
             </div>
+            
         </div>
         
         <p class="mt-16 text-center text-stone-400 text-[10px] uppercase tracking-[0.5em] font-bold">
