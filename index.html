@@ -12,7 +12,6 @@
         h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--burgundy); }
         .montserrat { font-family: 'Montserrat', sans-serif; }
         
-        /* Hero 保持呼吸感 */
         .hero-section {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero.png');
@@ -20,13 +19,19 @@
             display: flex; align-items: center; justify-content: center; text-align: center; color: white;
         }
 
-        /* Lifestyle 图片完整显示逻辑 */
+        /* Ensuring full image display without cropping */
         .lifestyle-img {
-            width: 100%; height: auto; /* 核心：确保图片不被裁剪 */
-            object-fit: contain; background: #fff;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 8px solid white;
+            width: 100%;
+            height: auto;
+            display: block;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 10px solid white;
+            transition: transform 0.3s ease;
         }
+        .lifestyle-img:hover { transform: scale(1.02); }
 
+        nav { background: rgba(253, 251, 247, 0.95); backdrop-blur: 8px; }
+        .nav-link { transition: color 0.3s; position: relative; }
         .nav-link:hover { color: var(--burgundy); }
     </style>
 </head>
@@ -35,12 +40,12 @@
     <header class="hero-section">
         <div class="px-6">
             <h1 class="text-6xl md:text-8xl mb-4 text-white uppercase tracking-tighter">Kiren</h1>
-            <p class="text-2xl md:text-3xl italic mb-6 text-white font-light">"Savoring Freedom, Deciding Excellence."</p>
-            <p class="montserrat text-[10px] tracking-[0.6em] uppercase opacity-90 text-white">Assaporare la libertà, decidere l'eccellenza</p>
+            <p class="text-2xl md:text-3xl italic mb-6 text-white font-light italic">"Savoring Freedom, Deciding Excellence."</p>
+            <p class="montserrat text-[10px] tracking-[0.6em] uppercase opacity-90 text-white font-bold">Assaporare la libertà, decidere l'eccellenza</p>
         </div>
     </header>
 
-    <nav class="sticky top-0 z-50 py-6 px-10 flex justify-between items-center bg-white/95 backdrop-blur-md border-b border-stone-100">
+    <nav class="sticky top-0 z-50 py-6 px-10 flex justify-between items-center border-b border-stone-100">
         <span class="text-burgundy font-bold text-2xl italic">K.</span>
         <div class="hidden md:flex space-x-12 montserrat text-[10px] uppercase tracking-[0.3em] font-bold">
             <a href="#about" class="nav-link">About</a>
@@ -51,70 +56,70 @@
 
     <section id="about" class="py-24 px-8 max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
         <div>
-            <h2 class="text-5xl mb-10 italic">Professional Edge</h2>
+            <h2 class="text-5xl mb-10 italic italic">Professional Edge</h2>
             <div class="space-y-6 text-gray-700 leading-relaxed text-lg">
                 <p>Currently pursuing a <strong>Master in Italian Food and Wine</strong> at University of Padua.</p>
-                <p class="italic text-stone-500">Blending hospitality precision with a deep passion for Italian terroir and global market alignment.</p>
+                <p class="italic text-stone-500 italic">Combining hospitality precision with a deep passion for Italian terroir and global market strategies.</p>
             </div>
-            <img src="professional.png" alt="Kiren" class="mt-12 rounded shadow-2xl border-[12px] border-white w-full">
+            <img src="professional.png" alt="Kiren" class="mt-12 rounded shadow-2xl border-[15px] border-white w-full">
         </div>
         <div class="space-y-12">
             <div class="border-l-4 border-burgundy pl-6">
                 <h3 class="text-xl font-bold uppercase montserrat tracking-widest mb-2">Education</h3>
-                <p class="text-sm font-bold">University of Padua | 2025 - 2027</p>
-                <p class="text-sm text-stone-500 italic">MSc Italian Food and Wine</p>
+                <p class="text-sm font-bold tracking-tight">University of Padua | 2025 - 2027</p>
+                <p class="text-sm text-stone-500 italic italic">MSc Italian Food and Wine</p>
             </div>
             <div class="border-l-4 border-burgundy pl-6">
-                <h3 class="text-xl font-bold uppercase montserrat tracking-widest mb-2">Hospitality</h3>
-                <p class="text-sm font-bold">The St. Regis Shanghai | 2024 - 2025</p>
-                <p class="text-sm text-stone-500 italic">Sales Coordinator [cite: 19]</p>
+                <h3 class="text-xl font-bold uppercase montserrat tracking-widest mb-2">Experience Highlight</h3>
+                <p class="text-sm font-bold tracking-tight">The St. Regis Shanghai | 2024 - 2025</p>
+                <p class="text-sm text-stone-500 italic italic">Sales Coordinator</p>
             </div>
         </div>
     </section>
 
     <section id="milestones" class="py-24 bg-stone-100 px-8">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl text-center mb-16 italic">Career Milestones</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 border-t-4 border-burgundy shadow-sm">
-                    <h3 class="montserrat text-xs font-bold uppercase tracking-tighter mb-4 text-stone-400">Sales & Operations</h3>
-                    <p class="font-bold mb-4">The St. Regis Shanghai</p>
-                    <p class="text-sm text-stone-600 leading-relaxed mb-4">Secured multimillion-dollar contracts and optimized order approvals, reducing processing time by 20%[cite: 20, 21].</p>
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl mb-16 italic italic">Career Milestones</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <div class="bg-white p-8 border-t-8 border-burgundy shadow-sm">
+                    <h3 class="montserrat text-[10px] font-bold uppercase tracking-widest mb-4 text-stone-400">Sales & Operations</h3>
+                    <p class="font-bold mb-4 tracking-tight">The St. Regis Shanghai</p>
+                    <p class="text-sm text-stone-600 leading-relaxed mb-4 font-light">Secured multimillion-dollar contracts and optimized order approvals, reducing processing time by 20%.</p>
                 </div>
-                <div class="bg-white p-8 border-t-4 border-burgundy shadow-sm">
-                    <h3 class="montserrat text-xs font-bold uppercase tracking-tighter mb-4 text-stone-400">Digital Marketing</h3>
-                    <p class="font-bold mb-4">Envista Holdings</p>
-                    <p class="text-sm text-stone-600 leading-relaxed mb-4">Managed global sales alignment and technical localization for DamonQ2 systems, ensuring seamless international delivery[cite: 26, 27].</p>
+                <div class="bg-white p-8 border-t-8 border-burgundy shadow-sm">
+                    <h3 class="montserrat text-[10px] font-bold uppercase tracking-widest mb-4 text-stone-400">Global Marketing</h3>
+                    <p class="font-bold mb-4 tracking-tight">Envista Holdings</p>
+                    <p class="text-sm text-stone-600 leading-relaxed mb-4 font-light">Facilitated international sales and logistics for DamonQ2 systems. Translated technical R&D materials to align marketing with global sales goals.</p>
                 </div>
-                <div class="bg-white p-8 border-t-4 border-burgundy shadow-sm">
-                    <h3 class="montserrat text-xs font-bold uppercase tracking-tighter mb-4 text-stone-400">Social Strategy</h3>
-                    <p class="font-bold mb-4">Popcorn Club</p>
-                    <p class="text-sm text-stone-600 leading-relaxed mb-4">Boosted offline event conversion by 20% through decisive WeChat community management and strategic digital publishing.</p>
+                <div class="bg-white p-8 border-t-8 border-burgundy shadow-sm">
+                    <h3 class="montserrat text-[10px] font-bold uppercase tracking-widest mb-4 text-stone-400">Digital Strategy</h3>
+                    <p class="font-bold mb-4 tracking-tight">Popcorn Club</p>
+                    <p class="text-sm text-stone-600 leading-relaxed mb-4 font-light">Increased offline event conversion by 20% through decisive WeChat community management and personalized user services.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="lifestyle" class="py-24 px-8 max-w-6xl mx-auto">
-        <h2 class="text-4xl text-center mb-16 italic">Veneto Life & Insights</h2>
-        <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
-            <img src="lifestyle1.png" class="lifestyle-img" alt="Sunset Vineyard">
-            <img src="lifestyle.png" class="lifestyle-img" alt="Personal Life">
-            <img src="lifestyle3.png" class="lifestyle-img" alt="Wine Exploration">
+        <h2 class="text-4xl text-center mb-16 italic italic">Veneto Life & Insights</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-start">
+            <img src="lifestyle4.png" class="lifestyle-img" alt="Italian Streets">
+            <img src="lifestyle6.png" class="lifestyle-img" alt="Cafe Culture">
+            <img src="lifestyle7.png" class="lifestyle-img" alt="Biodiversity Exploration">
         </div>
-        <div class="mt-16 text-center text-stone-400 montserrat text-[10px] uppercase tracking-[0.4em]">
+        <div class="mt-16 text-center text-stone-400 montserrat text-[10px] uppercase tracking-[0.5em] font-bold">
             Riccioto | Soave | Prosecco | Lugana | Fritto Misto
         </div>
     </section>
 
     <footer class="py-20 bg-stone-900 text-white text-center">
-        <h2 class="text-white text-2xl mb-8 italic">Stay Decisive.</h2>
-        <div class="opacity-40 montserrat text-[9px] uppercase tracking-widest space-y-2">
+        <h2 class="text-white text-2xl mb-8 italic italic">Stay Decisive.</h2>
+        <div class="opacity-40 montserrat text-[9px] uppercase tracking-[0.3em] space-y-2 font-bold">
             <p>University of Padua, Italy</p>
             <p>(+39) 3938549090</p>
             <p>yiran.qian@studenti.unipd.it</p>
         </div>
-        <p class="mt-16 text-[8px] opacity-20 uppercase tracking-[0.5em] text-white font-bold">&copy; 2026 Kiren</p>
+        <p class="mt-16 text-[8px] opacity-20 uppercase tracking-[0.5em] text-white font-bold">&copy; 2026 Kiren. Built for Excellence.</p>
     </footer>
 
 </body>
