@@ -6,10 +6,13 @@
     <title>Kiren | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <style>
         :root { --burgundy: #800020; --cream: #FDFBF7; }
         body { font-family: 'Montserrat', sans-serif; background-color: var(--cream); color: #1a1a1a; scroll-behavior: smooth; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--burgundy); }
+        
+        /* 统一标题字体 */
+        h1, h2, h3, .brand-font { font-family: 'Playfair Display', serif; }
         
         /* Hero Section */
         .hero-section {
@@ -19,22 +22,24 @@
             display: flex; align-items: center; justify-content: center; text-align: center; color: white;
         }
 
-        /* Milestone Card Styling */
+        /* Milestone Card */
         .milestone-card {
             background: white; border-top: 5px solid var(--burgundy);
             transition: all 0.4s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.02);
             padding: 2rem;
+            height: 100%;
         }
         .milestone-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
 
-        /* Lifestyle Image - Full Display (Masonry Logic) */
+        /* Lifestyle Image - Masonry Layout */
         .lifestyle-img {
             width: 100%; height: auto; border: 8px solid white;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            margin-bottom: 2rem; /* Spacing between stacked images on mobile */
+            margin-bottom: 2rem;
         }
         
         .nav-link:hover { color: var(--burgundy); }
+        /* 意大利语通用样式 */
         .ita-text { color: #666; font-style: italic; font-size: 0.9em; margin-top: 0.2rem; }
     </style>
 </head>
@@ -42,14 +47,14 @@
 
     <header class="hero-section">
         <div class="px-4">
-            <h1 class="text-7xl md:text-9xl mb-6 italic uppercase text-white tracking-tighter">Kiren</h1>
+            <h1 class="text-7xl md:text-9xl mb-6 italic uppercase text-white tracking-tighter brand-font">Kiren</h1>
             <p class="text-2xl md:text-4xl italic mb-2 font-light text-white">"Savoring Freedom, Deciding Excellence."</p>
             <p class="text-lg md:text-xl text-white/80 font-light mb-8 italic">"Assaporare la libertà, decidere l'eccellenza."</p>
         </div>
     </header>
 
     <nav class="sticky top-0 z-50 py-6 px-10 flex justify-between items-center bg-white/95 backdrop-blur-md border-b border-stone-100">
-        <span class="text-burgundy font-bold text-2xl italic">K.</span>
+        <span class="text-burgundy font-bold text-3xl italic brand-font">K.</span>
         <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.2em] font-semibold">
             <a href="#about" class="nav-link">About <span class="text-burgundy">/ Chi Sono</span></a>
             <a href="#milestones" class="nav-link">Milestones <span class="text-burgundy">/ Esperienze</span></a>
@@ -60,7 +65,7 @@
     <section id="about" class="py-24 px-8 max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
         <div class="order-2 md:order-1">
             <h2 class="text-5xl mb-2 italic">Professional Edge</h2>
-            <p class="text-xl text-burgundy/60 italic mb-8 font-serif">Profilo Professionale</p>
+            <p class="text-xl text-burgundy/60 italic mb-8 brand-font">Profilo Professionale</p>
             
             <div class="space-y-8 text-gray-700 leading-relaxed text-lg">
                 <div>
@@ -81,13 +86,13 @@
     <section id="milestones" class="py-24 bg-stone-100 px-8">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-4xl text-center mb-2 italic">Career Milestones</h2>
-            <p class="text-center text-burgundy/60 italic mb-16 font-serif text-xl">Traguardi Professionali</p>
+            <p class="text-center text-burgundy/60 italic mb-16 brand-font text-xl">Traguardi Professionali</p>
             
             <div class="grid md:grid-cols-3 gap-8">
                 
                 <div class="milestone-card">
                     <h3 class="text-[10px] font-bold uppercase tracking-widest mb-1 opacity-40">Hospitality</h3>
-                    <h4 class="text-burgundy text-lg font-bold mb-4">The St. Regis Shanghai</h4>
+                    <h4 class="text-burgundy text-lg font-bold mb-4 brand-font">The St. Regis Shanghai</h4>
                     <p class="font-bold text-sm uppercase tracking-wide mb-1">Sales Coordinator</p>
                     <p class="text-xs text-stone-500 italic mb-4">Coordinatore Vendite</p>
                     <hr class="border-stone-200 mb-4">
@@ -97,7 +102,7 @@
 
                 <div class="milestone-card">
                     <h3 class="text-[10px] font-bold uppercase tracking-widest mb-1 opacity-40">MedTech</h3>
-                    <h4 class="text-burgundy text-lg font-bold mb-4">Envista Holdings</h4>
+                    <h4 class="text-burgundy text-lg font-bold mb-4 brand-font">Envista Holdings</h4>
                     <p class="font-bold text-sm uppercase tracking-wide mb-1">Digital Marketing</p>
                     <p class="text-xs text-stone-500 italic mb-4">Marketing Digitale</p>
                     <hr class="border-stone-200 mb-4">
@@ -107,7 +112,7 @@
 
                 <div class="milestone-card">
                     <h3 class="text-[10px] font-bold uppercase tracking-widest mb-1 opacity-40">E-Commerce</h3>
-                    <h4 class="text-burgundy text-lg font-bold mb-4">Popcorn Club</h4>
+                    <h4 class="text-burgundy text-lg font-bold mb-4 brand-font">Popcorn Club</h4>
                     <p class="font-bold text-sm uppercase tracking-wide mb-1">Online Sales & Marketing</p>
                     <p class="text-xs text-stone-500 italic mb-4">Vendite e Marketing Online</p>
                     <hr class="border-stone-200 mb-4">
@@ -121,9 +126,9 @@
 
     <section id="lifestyle" class="py-24 px-8 max-w-6xl mx-auto">
         <h2 class="text-4xl text-center mb-2 italic">Veneto Life & Insights</h2>
-        <p class="text-center text-burgundy/60 italic mb-16 font-serif text-xl">Vita in Veneto e Visioni</p>
+        <p class="text-center text-burgundy/60 italic mb-16 brand-font text-xl">Vita in Veneto e Visioni</p>
         
-        <div class="columns-1 md:columns-3 gap-8 space-y-8">
+        <div class="columns-1 md:columns-2 gap-8 space-y-8">
             <div class="break-inside-avoid">
                 <img src="lifestyle4.png" class="lifestyle-img" alt="Exploration">
             </div>
@@ -133,16 +138,27 @@
             <div class="break-inside-avoid">
                 <img src="lifestyle7.png" class="lifestyle-img" alt="Biodiversity">
             </div>
+            <div class="break-inside-avoid">
+                <img src="lifestyle3.png" class="lifestyle-img" alt="Wine Culture">
+            </div>
         </div>
         
         <p class="mt-16 text-center text-stone-400 text-[10px] uppercase tracking-[0.5em] font-bold">
             Riccioto | Soave | Prosecco | Lugana | Fritto Misto
         </p>
+
+        <div class="text-center border-t border-stone-200 pt-16 mt-16">
+            <h3 class="text-2xl italic mb-6 text-stone-500 brand-font">Interested in collaboration?</h3>
+            <p class="text-sm text-stone-400 italic mb-6">Sei interessato a collaborare?</p>
+            <a href="mailto:yiran.qian@studenti.unipd.it" class="inline-block bg-[#800020] text-white px-10 py-4 uppercase tracking-[0.2em] text-xs font-bold hover:bg-[#600018] transition">
+                Contact Me / Contattami
+            </a>
+        </div>
     </section>
 
     <footer class="py-20 bg-stone-900 text-white text-center">
-        <h2 class="text-white text-2xl mb-2 italic tracking-widest">Stay Decisive.</h2>
-        <p class="text-white/40 italic mb-10 font-serif text-sm">Rimani Deciso.</p>
+        <h2 class="text-white text-2xl mb-2 italic tracking-widest brand-font">Stay Decisive.</h2>
+        <p class="text-white/40 italic mb-10 brand-font text-sm">Rimani Deciso.</p>
         
         <div class="opacity-40 text-[10px] uppercase tracking-[0.3em] space-y-3 font-semibold">
             <p>University of Padua, Italy</p>
