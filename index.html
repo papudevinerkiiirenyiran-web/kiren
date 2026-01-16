@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yiran Qian | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --burgundy: #800020; --cream: #FDFBF7; }
+        body { font-family: 'Lato', sans-serif; background-color: var(--cream); color: #1a1a1a; scroll-behavior: smooth; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .hero-section {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://i.postimg.cc/rwR4nz2J/hero.jpg');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+        }
+        .section-title { color: var(--burgundy); position: relative; display: inline-block; padding-bottom: 8px; border-bottom: 2px solid var(--burgundy); }
+    </style>
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="px-6">
+            <h1 class="text-6xl md:text-8xl mb-4 tracking-tighter">Yiran Qian</h1>
+            <p class="text-xl md:text-3xl italic mb-6 font-light">"Savoring Freedom, Deciding Excellence."</p>
+            <p class="text-xs md:text-sm tracking-[0.4em] uppercase opacity-80">Assaporare la libertà, decidere l'eccellenza</p>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 px-8 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div class="order-2 md:order-1">
+            <h2 class="text-5xl mb-10 section-title italic">Professional Edge</h2>
+            <div class="space-y-6 text-gray-700 leading-relaxed text-lg font-light">
+                <p>
+                    <strong>Master in Italian Food and Wine</strong> at Università degli Studi di Padova. 
+                    I blend the precision of hospitality management with a deep passion for Italian terroir.
+                </p>
+                <p class="italic text-gray-500">
+                    Socio sostenitore della cultura enogastronomica italiana, unisco rigore professionale e spirito libero.
+                </p>
+            </div>
+        </div>
+        <div class="order-1 md:order-2">
+            <img src="https://i.postimg.cc/6QsvDw9N/professional.jpg" alt="Yiran Qian" class="rounded shadow-2xl">
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 bg-stone-100 px-8">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+            <div class="bg-white p-10 shadow-sm">
+                <h3 class="text-burgundy text-xl font-bold mb-4 uppercase tracking-widest">The St. Regis Shanghai</h3>
+                <p class="font-bold mb-2">Sales Coordinator</p>
+                <p class="text-gray-600 font-light">Managed multimillion-dollar contracts and optimized order processing by 20%.</p>
+                <p class="text-gray-400 text-sm mt-4 italic">Coordinamento vendite e ottimizzazione processi commerciali.</p>
+            </div>
+            <div class="bg-white p-10 shadow-sm">
+                <h3 class="text-burgundy text-xl font-bold mb-4 uppercase tracking-widest">Envista Holdings</h3>
+                <p class="font-bold mb-2">Digital Marketing & Translation</p>
+                <p class="text-gray-600 font-light">Facilitated global R&D and sales communication through precise technical localization.</p>
+                <p class="text-gray-400 text-sm mt-4 italic">Localizzazione tecnica e supporto al marketing digitale globale.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="lifestyle" class="py-24 px-8 max-w-7xl mx-auto">
+        <h2 class="text-4xl text-center mb-16 italic text-burgundy">Veneto Life & Insights</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <img src="https://i.postimg.cc/8zfvKsVk/lifestyle1.jpg" class="h-96 w-full object-cover rounded shadow-lg">
+            <img src="https://i.postimg.cc/XvMCT3Vb/lifestyle3.jpg" class="h-96 w-full object-cover rounded shadow-lg">
+            <img src="https://i.postimg.cc/1RWNyD9J/lifestyle.jpg" class="h-96 w-full object-cover rounded shadow-lg">
+        </div>
+    </section>
+
+    <footer class="py-20 bg-black text-white text-center">
+        <h2 class="text-2xl mb-8 tracking-[0.2em] font-light italic">Stay Decisive.</h2>
+        <div class="opacity-50 font-light text-sm space-y-2">
+            <p>University of Padua, Italy</p>
+            <p>(+39) 3938549090</p>
+            <p>yiran.qian@studenti.unipd.it</p>
+        </div>
+        <p class="mt-16 text-[10px] opacity-20 tracking-[0.5em] uppercase">&copy; 2026 Yiran Qian</p>
+    </footer>
+
+</body>
+</html>
